@@ -1,0 +1,54 @@
+.header{
+padding: 10px;
+background-color: #61838c;
+
+
+
+
+}
+
+.nav{
+
+
+
+
+  display: flex;
+    justify-content: center;
+align-items: center;
+    flex-direction: row;
+   
+
+
+}
+.nav a{
+  
+    color: #193d3f;
+    padding: 10px;
+   
+    text-decoration: none;
+   
+}
+.section {
+display:grid;
+grid-template-columns: repeat(2, 1fr);
+justify-content: center;
+gap: 20px;
+margin-left: 50px;
+padding: 20px;
+animation: khaled 2s ease-in-out 0s infinite alternate;
+}
+
+.section img:hover{
+  width: 100%;
+  height: 100%;                      
+  border-radius: 30px;
+  transform: scale(1.1);
+}
+
+
+.footer{
+    padding: 10px;
+background-color: #61838c;
+
+
+}
