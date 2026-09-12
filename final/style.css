@@ -26,6 +26,7 @@ align-items: center;
     padding: 10px;
    
     text-decoration: none;
+   round: 5px;
    
 }
 .section {
@@ -51,4 +52,21 @@ animation: khaled 2s ease-in-out 0s infinite alternate;
 background-color: #61838c;
 
 
+}
+@keyframes moveCar {
+0%{
+    transform:translatey(0px)
+}
+100%{
+    transform:translatey(20px)
+}
+}
+.moveCar{
+    animation: moveCar 1s ease-in-out infinite alternate;
+}
+.bggg{
+    background-color: #4e676e;
+}
+.header4{
+    background-color: #688891;
 }
