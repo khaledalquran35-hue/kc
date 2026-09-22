@@ -1,71 +1,175 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" 
-    rel="stylesheet" 
-    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
-     crossorigin="anonymous">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About - My Car</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
-<body class="bg-white text-dark">
-   <header> <h1 class="d-flex justify-content-center align-items-center bg-white text-dark p-4">Welcome to My car</h1></header>
-<main>
-    <section class="d-flex justify-content-center align-items-center bg-dark text-white p-4">
-        <p id="ll">Welcome to my car website. Here you can find information about different car models, their features, and specifications. Feel free to explore and learn more about the cars that interest you.</p>
-    </section>
-    <section>
-<h2 class="lk">the best cars</h2>
-<ul >
-    <li>Porsche</li>
-    <li>mercedes</li>
-    <li>audi</li>
-</ul>
+<body class="bg-light">
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">My Car</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+    <li class="nav-item"><a class="nav-link active" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="signin.html">Sign In</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
 
+  <div class="container py-3">
 
-    </section>
-    <section>                                                 
-        <div>
-        <label class="m-3 " for="gender">gender:</label>
-        <br>
-<label  class="m-3 " for="male">Male</label>
-        <input type="radio" name="gender" id="male" value="male">
-        <label class="m-3 " for="female">Female</label>
-        <input type="radio" name="gender" id="female" value="female">
-        </div>
-        <br>
-        <div class="m-3">
-            <label for="color">Color:</label>
-            <input type="color" id="color" name="color">
-        </div>
-    </section>
-    <section><table border="1" class="table table-borderless m-3">
-        <thead ><tr><th>TYPE</th>
-            <th>MODEL</th>
-            <th>YEAR</th>
-            <th>ACTION</th>
-    </tr>
+    <div class="p-4 p-md-5 mb-4 rounded text-center bg-white shadow-sm">
+      <h1 class="display-5 fw-bold text-dark">Welcome to My Car</h1>
+      <p class="lead text-muted">
+        Here you can find information about different car models, their features, and specifications. 
+        Feel free to explore and learn more about the cars that interest you.
+      </p>
+    </div>
+
+    <div class="row g-4">
+      
+
+      <div class="col-md-5">
+        <div class="card border-0 shadow-sm p-4">
+          <h4 class="card-title fw-bold mb-3 text-primary">Filter & Preferences</h4>
+          
+          
+          <div class="mb-3">
+            <label class="form-label fw-bold">The Best Cars:</label>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item bg-transparent ps-0">• Porsche</li>
+              <li class="list-group-item bg-transparent ps-0">• Mercedes</li>
+              <li class="list-group-item bg-transparent ps-0">• Audi</li>
+            </ul>
+          </div>
+
+  
+          <div class="mb-3">
+            <label class="form-label fw-bold d-block">Gender:</label>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="gender" id="male" value="Male">
+              <label class="form-check-label" for="male">Male</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="gender" id="female" value="Female">
+              <label class="form-check-label" for="female">Female</label>
+            </div>
+          </div>
+
        
- 
-</thead>
-        <tbody id="carTable">
+          <div class="mb-3">
+            <label for="carColor" class="form-label fw-bold">Favorite Color:</label>
+            <input type="color" class="form-control form-control-color" id="carColor" value="#0d6efd" title="Choose color">
+          </div>
+
+          <hr>
+          <h6 class="fw-bold mb-3">Add Car to Table:</h6>
+          <div class="mb-2">
+            <input type="text" id="typeInput" class="form-control" placeholder="Car Type (e.g. Audi)">
+          </div>
+          <div class="mb-2">
+            <input type="text" id="modelInput" class="form-control" placeholder="Model (e.g. A6)">
+          </div>
+          <div class="mb-3">
+            <input type="number" id="yearInput" class="form-control" placeholder="Year (e.g. 2022)">
+          </div>
+
+          <button id="addCarBtn" class="btn btn-primary w-100 fw-bold">OK / Add Car</button>
+        </div>
+      </div>
+
+   
+      <div class="col-md-7">
+        <div class="card border-0 shadow-sm p-4 h-100">
+          <h4 class="card-title fw-bold mb-3 text-primary">Car Inventory Table</h4>
+          
+          <div class="table-responsive">
+            <table class="table table-hover table-striped align-middle" id="carTable">
+              <thead class="table-dark">
+                <tr>
+                  <th scope="col">TYPE</th>
+                  <th scope="col">MODEL</th>
+                  <th scope="col">YEAR</th>
+                  <th scope="col" class="text-center">ACTION</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Audi</td>
+                  <td>A4</td>
+                  <td>2020</td>
+                  <td class="text-center">
+                    <button class="btn btn-danger btn-sm delete-btn">Delete</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Mercedes</td>
+                  <td>C-Class</td>
+                  <td>2021</td>
+                  <td class="text-center">
+                    <button class="btn btn-danger btn-sm delete-btn">Delete</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('addCarBtn').addEventListener('click', function() {
+      const type = document.getElementById('typeInput').value;
+      const model = document.getElementById('modelInput').value;
+      const year = document.getElementById('yearInput').value;
+
+      if(type === '' || model === '' || year === '') {
+        alert('Please fill all fields!');
+        return;
+      }
+
+      const tableBody = document.querySelector('#carTable tbody');
+      const newRow = document.createElement('tr');
+
+      newRow.innerHTML = `
+        <td>${type}</td>
+        <td>${model}</td>
+        <td>${year}</td>
+        <td class="text-center">
+          <button class="btn btn-danger btn-sm delete-btn">Delete</button>
+        </td>
+      `;
+
+      tableBody.appendChild(newRow);
+
+   
+      document.getElementById('typeInput').value = '';
+      document.getElementById('modelInput').value = '';
+      document.getElementById('yearInput').value = '';
+    });
+
+    // حذف السطر عند الضغط على زر Delete
+    document.querySelector('#carTable').addEventListener('click', function(e) {
+      if(e.target.classList.contains('delete-btn')) {
+        e.target.closest('tr').remove();
+      }
+    });
+  </script>
 
 
-
-
-
-        </tbody>
-</table>
-    
-    </section>
-    <button id="ok" class="btn btn-primary m-3 ">ok</button>
-</main>
-<script src="./main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
-
-
-
-
