@@ -161,7 +161,6 @@
       document.getElementById('yearInput').value = '';
     });
 
-    // حذف السطر عند الضغط على زر Delete
     document.querySelector('#carTable').addEventListener('click', function(e) {
       if(e.target.classList.contains('delete-btn')) {
         e.target.closest('tr').remove();
